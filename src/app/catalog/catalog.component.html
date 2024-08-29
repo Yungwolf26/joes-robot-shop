@@ -7,20 +7,21 @@
     <a class="button">All</a>
   </div>
 
-  <ul class="products">
+  <ul class="product">
     <li class="product-item">
       <div class="product">
         <div class="product-details">
-          <img src="{{'/assets/images/robot-parts/' + products.imageName}}" alt="" />
+          <img class="product-image" [src]="geImageUrl(product)" [alt]="product.name" />
+          <span class="product-name">{{product.name}}</span>
           <div class="product-info">
-            <div class="name">{{products.name}}</div>
-            <div class="description">{{products.description}}</div>
-            <div class="category">Part Type: {{products.category}}</div>
+            <div class="name">{{product.name}}</div>
+            <div class="description">{{product.description}}</div>
+            <div class="category">Part Type: {{product.category}}</div>
           </div>
         </div>
         <div class="price">
           <div>
-            <div>${{products.price.toFixed()}}</div>
+            <div>${{product.price.toFixed()}}</div>
           </div>
           <button class="button-buy">Buy</button>
         </div>

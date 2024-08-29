@@ -7,10 +7,10 @@ import {IProduct} from "../model/product.model";
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent {
-  products: IProduct;
+  product: IProduct;
 
   constructor() {
-    this.products =
+    this.product =
       {
         id: 1,
         description: 'A friendly robot head with two eyes and smile -- Great for domestic use.',
@@ -22,4 +22,7 @@ export class CatalogComponent {
       };
   }
 
+  geImageUrl(product: IProduct) {
+    return `/assets/images/robot-parts/${product.imageName}`;
+  }
 }

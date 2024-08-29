@@ -100,3 +100,24 @@
   padding: 10px;
   width: 100px;
 }
+
+.product-details {
+  position: relative;
+  display: inline-block;
+}
+
+.product-name {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.product-details:hover .product-name {
+  display: block;
+}
+
