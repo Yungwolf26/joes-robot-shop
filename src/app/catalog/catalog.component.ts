@@ -1,28 +1,23 @@
-import { Component } from '@angular/core';
-import {IProduct} from "../model/product.model";
+import { Component, OnInit } from '@angular/core';
+import { IProduct } from '../model/product.model';
+import { products } from '../data/products-data';
 
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.css']
+  styleUrls: ['./catalog.component.css'],
 })
-export class CatalogComponent {
-  product: IProduct;
+export class CatalogComponent implements OnInit {
+  products: IProduct[] = [];
 
-  constructor() {
-    this.product =
-      {
-        id: 1,
-        description: 'A friendly robot head with two eyes and smile -- Great for domestic use.',
-        name: 'Robotic Chair',
-        imageName: "head-friendly.png",
-        category: "Heads",
-        price: 945,
-        discount: 0.2,
-      };
+  ngOnInit(): void {
+    this.products = products;
+    console.log(products);
+
+    throw new Error('Products data are not implemented.');
   }
 
-  geImageUrl(product: IProduct) {
+  getImageUrl(product: IProduct) {
     return `/assets/images/robot-parts/${product.imageName}`;
   }
 }

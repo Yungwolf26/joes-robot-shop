@@ -7,11 +7,11 @@
     <a class="button">All</a>
   </div>
 
-  <ul class="product">
-    <li class="product-item">
+  <ul class="products">
+    <li class="product-item" *ngFor="let product of products">
       <div class="product">
         <div class="product-details">
-          <img class="product-image" [src]="geImageUrl(product)" [alt]="product.name" />
+          <img [src]="getImageUrl(product)" [alt]="product.name"/>
           <span class="product-name">{{product.name}}</span>
           <div class="product-info">
             <div class="name">{{product.name}}</div>
@@ -20,10 +20,8 @@
           </div>
         </div>
         <div class="price">
-          <div>
-            <div>${{product.price.toFixed()}}</div>
-          </div>
-          <button class="button-buy">Buy</button>
+          <div>${{product.price.toFixed()}}</div>
+          <button class="cta">Buy</button>
         </div>
       </div>
     </li>
