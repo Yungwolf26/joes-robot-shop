@@ -8,7 +8,8 @@ import { products } from '../data/products-data';
   styleUrls: ['./catalog.component.css'],
 })
 export class CatalogComponent implements OnInit {
-  products: IProduct[] = [];
+  products: any;
+  filter:string = '';
 
   ngOnInit(): void {
     this.products = products;
@@ -19,5 +20,13 @@ export class CatalogComponent implements OnInit {
 
   getImageUrl(product: IProduct) {
     return `/assets/images/robot-parts/${product.imageName}`;
+  }
+
+  getFilteredProducts(){
+    return this.filter === ''
+      ? this.products
+      : this.products.filter((product:any) => {
+        return product.category === this.filter;
+      });
   }
 }

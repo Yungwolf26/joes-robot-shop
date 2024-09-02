@@ -48,18 +48,18 @@
 }
 
 .product-name {
-  display: none; /* Masquer le nom par défaut */
+  display: none;
   position: absolute;
-  bottom: 10px; /* Ajuster la position selon vos besoins */
-  left: 10px; /* Ajuster la position selon vos besoins */
-  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
-  color: white; /* Couleur du texte */
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   padding: 5px;
   border-radius: 5px;
 }
 
 .product-container:hover .product-name {
-  display: block; /* Afficher le nom lorsque l'on survole l'image */
+  display: block;
 }
 
 .product .name {
@@ -94,8 +94,8 @@
   width: 100px;
 }
 
-/* Buton Buy Details */
-.cta {
+.cta,
+.button {
   background-color: #F49BC8;
   border: none;
   color: white;
@@ -114,19 +114,14 @@
 }
 
 .button {
-  background-color: #58C3DF; /* Couleur de fond bleue */
-  border: none; /* Supprime la bordure par défaut */
-  color: white; /* Couleur du texte */
-  padding: 10px 20px; /* Espacement intérieur */
-  text-align: center; /* Centrer le texte */
-  text-decoration: none; /* Supprime la sous-ligne */
-  display: inline-block; /* Affichage en ligne */
-  font-size: 16px; /* Taille de la police */
-  margin: 4px 2px; /* Espacement externe */
-  cursor: pointer; /* Curseur en forme de main */
-  border-radius: 5px; /* Coins arrondis */
+  background-color: #58C3DF;
 }
 
 .button:hover {
-  background-color: #7CCCE0; /* Couleur de fond plus claire au survol */
+  background-color: #7CCCE0;
+}
+
+.discount{
+  margin-top: -15px;
+  color: #d25ca1;
 }
